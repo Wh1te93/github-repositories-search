@@ -4,20 +4,6 @@
   flex-direction: column;
 }
 
-.header {
-  position: sticky;
-  top:0;
-  height: 80px;
-  width: 100%;
-  padding: 20px 32px;
-  background-color: #00838F;
-}
-
-.searchPanel {
-  display: flex;
-  align-items: center;
-}
-
 .main {
   flex-grow: 1;
   display: flex;

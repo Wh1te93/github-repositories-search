@@ -1,0 +1,22 @@
+.header {
+  position: sticky;
+  top:0;
+  height: 80px;
+  width: 100%;
+  padding: 20px 32px;
+  background-color: #00838F;
+}
+
+.searchPanel {
+  display: flex;
+  align-items: center;
+}
+
+.searchPanelInput {
+  width: 100%;
+  max-width: 912px;
+  margin-right: 8px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  font-style: italic;
+}

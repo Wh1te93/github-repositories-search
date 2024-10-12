@@ -16,7 +16,7 @@ import {
   updateSearchFilter,
 } from "features/searchFilter";
 
-import { Details } from "./Details/Details";
+import { Details } from "./Details";
 import EnhancedTable from "./Table/Table";
 import { Order } from "./Table/types";
 
@@ -55,17 +55,17 @@ export const Search = () => {
   }, [searchFilter, setSearchParams]);
 
   useEffect(() => {
-      if (searchParams.get("name")) {
-          dispatch(
-              updateSearchFilter({
-                  searchStr: searchParams.get("name") || "",
-                  rowsPerPage: Number(searchParams.get("perPage")) || 5,
-                  page: Number(searchParams.get("page")) || 0,
-                  orderBy: searchParams.get("sort") || "stars",
-                  order: (searchParams.get("order") as Order) || "desc",
-              }),
-          );
-      }
+    if (searchParams.get("name")) {
+      dispatch(
+        updateSearchFilter({
+          searchStr: searchParams.get("name") || "",
+          rowsPerPage: Number(searchParams.get("perPage")) || 5,
+          page: Number(searchParams.get("page")) || 0,
+          orderBy: searchParams.get("sort") || "stars",
+          order: (searchParams.get("order") as Order) || "desc",
+        }),
+      );
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
